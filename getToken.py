@@ -1,8 +1,14 @@
 import requests
-import config.client as client
 
-CLIENT_ID = client.ID
-CLIENT_SECRETS = client.SECRETS
+import os 
+import json
+
+credential_path = os.path.join("./configs","credential.json")
+with open(credential_path) as f :
+    credential = json.load(f)
+
+CLIENT_ID = credential["ID"]
+CLIENT_SECRETS = credential["SECRETS"]
 
 url = "https://accounts.spotify.com/api/token"
 headers = {
