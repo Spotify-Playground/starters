@@ -1,20 +1,20 @@
 import requests
-
-import os 
 import json
 
-credential_path = os.path.join("./configs","credential.json")
-
-def read_credential(key) :
+def get_credential(key) :
     try: 
-        with open(credential_path, 'r') as file :
+        with open("configs/credential.json", "r") as file :
             credential = json.load(file)
             return credential[key]
     except FileNotFoundError:
         return None
 
-CLIENT_ID = read_credential("ID")
-CLIENT_SECRETS = read_credential("SECRETS")
+def set_access_token(access_token):
+    with open("configs/accesstoken.txt", "w") as file :
+        file.write(access_token)
+
+CLIENT_ID = get_credential("ID")
+CLIENT_SECRETS = get_credential("SECRETS")
 
 url = "https://accounts.spotify.com/api/token"
 headers = {
@@ -35,6 +35,7 @@ else:
 
 if "access_token" in response_json:
     access_token = response_json["access_token"]
+    set_access_token(access_token)
     print(f"Value of 'access_token': {access_token}")
 else:
     print("Key 'access_token' not found in the JSON response.")
