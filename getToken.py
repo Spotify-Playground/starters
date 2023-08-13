@@ -10,7 +10,7 @@ def get_credential(key) :
         return None
 
 def set_access_token(access_token):
-    with open("configs/accesstoken.txt", "w") as file :
+    with open("configs/accesstoken", "w") as file :
         file.write(access_token)
 
 CLIENT_ID = get_credential("ID")
