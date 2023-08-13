@@ -16,6 +16,10 @@ def generate_random_string(length):
     letters = string.ascii_letters + string.digits
     return ''.join(random.choice(letters) for _ in range(length))
 
+def save_token_to_file(token):
+    with open("config/RefreshToken.txt", "w") as file:
+        file.write(token)
+
 @app.route('/login')
 def login():
     state = generate_random_string(16)
@@ -47,15 +51,14 @@ def callback():
         data = response.json()
         access_token = data['access_token']
         refresh_token = data.get('refresh_token', None)
-
+        save_token_to_file(refresh_token)
+        
         user_response = requests.get('https://api.spotify.com/v1/me', headers={
             'Authorization': 'Bearer ' + access_token
         })
 
         user_data = user_response.json()
         return jsonify({'user_data': user_data, 'access_token': access_token, 'refresh_token': refresh_token})
-
     return 'Error during token exchange', 400
-
 if __name__ == '__main__':
     app.run(port=3000)
