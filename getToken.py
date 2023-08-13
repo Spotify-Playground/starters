@@ -4,11 +4,17 @@ import os
 import json
 
 credential_path = os.path.join("./configs","credential.json")
-with open(credential_path, 'r') as file :
-    credential = json.load(file)
 
-CLIENT_ID = credential["ID"]
-CLIENT_SECRETS = credential["SECRETS"]
+def read_credential(key) :
+    try: 
+        with open(credential_path, 'r') as file :
+            credential = json.load(file)
+            return credential[key]
+    except FileNotFoundError:
+        return None
+
+CLIENT_ID = read_credential("ID")
+CLIENT_SECRETS = read_credential("SECRETS")
 
 url = "https://accounts.spotify.com/api/token"
 headers = {
