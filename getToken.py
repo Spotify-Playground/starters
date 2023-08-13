@@ -4,8 +4,8 @@ import os
 import json
 
 credential_path = os.path.join("./configs","credential.json")
-with open(credential_path) as f :
-    credential = json.load(f)
+with open(credential_path, 'r') as file :
+    credential = json.load(file)
 
 CLIENT_ID = credential["ID"]
 CLIENT_SECRETS = credential["SECRETS"]
