@@ -16,7 +16,7 @@ data = {
 
 response = requests.post(url, headers=headers, data=data)
 
-if response.status_code == 200:  # HTTP OK
+if response.status_code == 200:
     response_json = response.json()
 else:
     print(f"Error: {response.status_code}")
