@@ -1,5 +1,7 @@
 import requests
 import json
+import os
+
 
 # curl --request GET \
 #   --url https://api.spotify.com/v1/me/playlists \
