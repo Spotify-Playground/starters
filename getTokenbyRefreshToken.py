@@ -31,7 +31,9 @@ state_key = 'spotify_auth_state'
 Refresh_token = read_token_from_file()
 
 url = "https://accounts.spotify.com/api/token"
-header = {'Authorization': 'Basic ' + base64.b64encode((client_id + ':' + client_secret).encode()).decode()}
+header = {
+    'Authorization': 'Basic ' + base64.b64encode((client_id + ':' + client_secret).encode()).decode()
+}
 data = {
     "grant_type": "refresh_token",
     "refresh_token": Refresh_token 
