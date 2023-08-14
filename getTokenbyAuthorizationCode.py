@@ -37,7 +37,7 @@ def login():
     state = generate_random_string(16)
     response = redirect('https://accounts.spotify.com/authorize?' + 
                         f'response_type=code&client_id={client_id}&' +
-                        f'scope=user-read-private%20user-read-email&' +
+                        f'scope=playlist-read-private playlist-modify-private playlist-modify-public playlist-read-private playlist-read-collaborative user-read-recently-played&' +
                         f'redirect_uri={redirect_uri}&state={state}')
     response.set_cookie(state_key, state)    
     return response
