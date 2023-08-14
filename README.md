@@ -1,8 +1,14 @@
-# starters
+# starters : OwlsClub
 
 Spotify 사용자 데이터 기반 개인화 서비스 
 
-## Functions (TBU)
+## Functions (Planned)
+- 재생목록에서 중복된 노래 제거
+- 사용자 통합 재생목록 생성
+- 사용자 통합 재생목록 갱신
+- 사용자 선호 장르 별 트랙 추천
+
+### Functions (Backlog)
 - 스포티파이 재생목록을 개인의 재생 기록을 기반으로 필터링 구성
 - N회 재생한 곡은 재생목록에 없으면 추가
 - 최근 듣지 않은 곡은 재생목록에서 삭제
@@ -28,7 +34,7 @@ Spotify 사용자 데이터 기반 개인화 서비스
 # Stacks
 - Python
 - Airflow
-- PostgreSql
 - Fast API
+- PostgreSql
 - Google Cloud Platform
 - Docker
