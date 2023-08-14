@@ -1,8 +1,14 @@
-# starters : OwlsClub
+## starters : OwlsClub 
+![image](https://github.com/Spotify-Playground/starters/assets/131243101/47fec427-2095-4217-aa0c-14876d03f2c6)
 
-Spotify 사용자 데이터 기반 개인화 서비스 
+### Spotify 사용자 데이터 기반 개인화 서비스
 
-## Functions (Planned)
+세계 최대의 음원 스트리밍 서비스 Spotify <br>
+사용자 데이터를 통해 개인 맞춤형 컨텐츠를 제공해 <br>
+사용자의 사용 경험을 더 올릴 수 있을 .. 것으로 기대 <br>
+데이터 활용 계획 (정석님 포부 유튜브 플리 업로드)
+
+### Functions (Planned)
 - 재생목록에서 중복된 노래 제거
 - 사용자 통합 재생목록 생성
 - 사용자 통합 재생목록 갱신
