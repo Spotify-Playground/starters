@@ -3,27 +3,34 @@ import random
 import string
 import requests
 import base64
-import config.info as info
+import json
 
 app = Flask(__name__)
-
-client_id = info.id
-client_secret = info.secret
-redirect_uri = info.RED_URI
-state_key = 'spotify_auth_state'
 
 def generate_random_string(length):
     letters = string.ascii_letters + string.digits
     return ''.join(random.choice(letters) for _ in range(length))
 
 def save_RefreshToken_to_file(token):
-    with open("config/RefreshToken.txt", "w") as file:
+    with open("configs/RefreshToken.txt", "w") as file:
         file.write(token)
 
 def save_AccessToken_to_file(token):
-    with open("config/AuthToken.txt", "w") as file:
+    with open("configs/AuthToken.txt", "w") as file:
         file.write(token)
         
+def get_credential(key) :
+    try: 
+        with open("configs/credential.json", "r") as file :
+            credential = json.load(file)
+            return credential[key]
+    except FileNotFoundError:
+        return None
+
+client_id = get_credential("ID")
+client_secret = get_credential("SECRETS")
+redirect_uri = get_credential("RED_URI")
+state_key = 'spotify_auth_state'
 
 @app.route('/login')
 def login():

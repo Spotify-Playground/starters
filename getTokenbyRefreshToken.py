@@ -1,22 +1,32 @@
 import requests
-import config.info as info
 import base64
-
-client_id = info.id
-client_secret = info.secret
+import json
 
 #토큰 저장하는 함수
 def save_token_to_file(token):
-    with open("config/AuthToken.txt", "w") as file:
+    with open("configs/AuthToken.txt", "w") as file:
         file.write(token)
 #토큰 불러오는 함수
 def read_token_from_file():
     try:
-        with open("config/RefreshToken.txt", "r") as file:
+        with open("configs/RefreshToken.txt", "r") as file:
             token = file.read().strip()
             return token
     except FileNotFoundError:
         return None
+
+def get_credential(key) :
+    try: 
+        with open("configs/credential.json", "r") as file :
+            credential = json.load(file)
+            return credential[key]
+    except FileNotFoundError:
+        return None
+
+client_id = get_credential("ID")
+client_secret = get_credential("SECRETS")
+redirect_uri = get_credential("RED_URI")
+state_key = 'spotify_auth_state'
 
 Refresh_token = read_token_from_file()
 
