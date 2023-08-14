@@ -16,9 +16,14 @@ def generate_random_string(length):
     letters = string.ascii_letters + string.digits
     return ''.join(random.choice(letters) for _ in range(length))
 
-def save_token_to_file(token):
+def save_RefreshToken_to_file(token):
     with open("config/RefreshToken.txt", "w") as file:
         file.write(token)
+
+def save_AccessToken_to_file(token):
+    with open("config/AuthToken.txt", "w") as file:
+        file.write(token)
+        
 
 @app.route('/login')
 def login():
@@ -51,7 +56,8 @@ def callback():
         data = response.json()
         access_token = data['access_token']
         refresh_token = data.get('refresh_token', None)
-        save_token_to_file(refresh_token)
+        save_AccessToken_to_file(access_token)
+        save_RefreshToken_to_file(refresh_token)
         
         user_response = requests.get('https://api.spotify.com/v1/me', headers={
             'Authorization': 'Bearer ' + access_token
