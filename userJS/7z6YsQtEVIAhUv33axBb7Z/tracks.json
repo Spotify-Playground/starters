@@ -4572,11 +4572,243 @@
             "video_thumbnail": {
                 "url": null
             }
+        },
+        {
+            "added_at": "2023-08-15T03:40:44Z",
+            "added_by": {
+                "external_urls": {
+                    "spotify": "https://open.spotify.com/user/31l5pbuskjvmp5jv6ytgzxt7jw4u"
+                },
+                "href": "https://api.spotify.com/v1/users/31l5pbuskjvmp5jv6ytgzxt7jw4u",
+                "id": "31l5pbuskjvmp5jv6ytgzxt7jw4u",
+                "type": "user",
+                "uri": "spotify:user:31l5pbuskjvmp5jv6ytgzxt7jw4u"
+            },
+            "is_local": false,
+            "primary_color": null,
+            "track": {
+                "album": {
+                    "album_type": "single",
+                    "artists": [
+                        {
+                            "external_urls": {
+                                "spotify": "https://open.spotify.com/artist/5a8EJtOEbUJDF4RX3mKK02"
+                            },
+                            "href": "https://api.spotify.com/v1/artists/5a8EJtOEbUJDF4RX3mKK02",
+                            "id": "5a8EJtOEbUJDF4RX3mKK02",
+                            "name": "Woo",
+                            "type": "artist",
+                            "uri": "spotify:artist:5a8EJtOEbUJDF4RX3mKK02"
+                        },
+                        {
+                            "external_urls": {
+                                "spotify": "https://open.spotify.com/artist/5KuvNz7npsGeDJdk8QHMVH"
+                            },
+                            "href": "https://api.spotify.com/v1/artists/5KuvNz7npsGeDJdk8QHMVH",
+                            "id": "5KuvNz7npsGeDJdk8QHMVH",
+                            "name": "meenoi",
+                            "type": "artist",
+                            "uri": "spotify:artist:5KuvNz7npsGeDJdk8QHMVH"
+                        }
+                    ],
+                    "external_urls": {
+                        "spotify": "https://open.spotify.com/album/24vtmVfDjVTxb9cCNRgheo"
+                    },
+                    "href": "https://api.spotify.com/v1/albums/24vtmVfDjVTxb9cCNRgheo",
+                    "id": "24vtmVfDjVTxb9cCNRgheo",
+                    "images": [
+                        {
+                            "height": 640,
+                            "url": "https://i.scdn.co/image/ab67616d0000b2738fafd7c4ab669379199599e0",
+                            "width": 640
+                        },
+                        {
+                            "height": 300,
+                            "url": "https://i.scdn.co/image/ab67616d00001e028fafd7c4ab669379199599e0",
+                            "width": 300
+                        },
+                        {
+                            "height": 64,
+                            "url": "https://i.scdn.co/image/ab67616d000048518fafd7c4ab669379199599e0",
+                            "width": 64
+                        }
+                    ],
+                    "is_playable": true,
+                    "name": "Ghosting",
+                    "release_date": "2022-08-18",
+                    "release_date_precision": "day",
+                    "total_tracks": 2,
+                    "type": "album",
+                    "uri": "spotify:album:24vtmVfDjVTxb9cCNRgheo"
+                },
+                "artists": [
+                    {
+                        "external_urls": {
+                            "spotify": "https://open.spotify.com/artist/5a8EJtOEbUJDF4RX3mKK02"
+                        },
+                        "href": "https://api.spotify.com/v1/artists/5a8EJtOEbUJDF4RX3mKK02",
+                        "id": "5a8EJtOEbUJDF4RX3mKK02",
+                        "name": "Woo",
+                        "type": "artist",
+                        "uri": "spotify:artist:5a8EJtOEbUJDF4RX3mKK02"
+                    },
+                    {
+                        "external_urls": {
+                            "spotify": "https://open.spotify.com/artist/5KuvNz7npsGeDJdk8QHMVH"
+                        },
+                        "href": "https://api.spotify.com/v1/artists/5KuvNz7npsGeDJdk8QHMVH",
+                        "id": "5KuvNz7npsGeDJdk8QHMVH",
+                        "name": "meenoi",
+                        "type": "artist",
+                        "uri": "spotify:artist:5KuvNz7npsGeDJdk8QHMVH"
+                    }
+                ],
+                "disc_number": 1,
+                "duration_ms": 220693,
+                "episode": false,
+                "explicit": false,
+                "external_ids": {
+                    "isrc": "KRC712200025"
+                },
+                "external_urls": {
+                    "spotify": "https://open.spotify.com/track/6r1Jwbd0UwCpuLzPG4y9Ub"
+                },
+                "href": "https://api.spotify.com/v1/tracks/6r1Jwbd0UwCpuLzPG4y9Ub",
+                "id": "6r1Jwbd0UwCpuLzPG4y9Ub",
+                "is_local": false,
+                "is_playable": true,
+                "name": "Ghosting (Prod. CODE KUNST)",
+                "popularity": 50,
+                "preview_url": "https://p.scdn.co/mp3-preview/4d44f0f9311f75e785393b7968956c3b733105aa?cid=1180fb31cb794ef887bb18daa3eccd90",
+                "track": true,
+                "track_number": 1,
+                "type": "track",
+                "uri": "spotify:track:6r1Jwbd0UwCpuLzPG4y9Ub"
+            },
+            "video_thumbnail": {
+                "url": null
+            }
+        },
+        {
+            "added_at": "2023-08-15T03:41:24Z",
+            "added_by": {
+                "external_urls": {
+                    "spotify": "https://open.spotify.com/user/31l5pbuskjvmp5jv6ytgzxt7jw4u"
+                },
+                "href": "https://api.spotify.com/v1/users/31l5pbuskjvmp5jv6ytgzxt7jw4u",
+                "id": "31l5pbuskjvmp5jv6ytgzxt7jw4u",
+                "type": "user",
+                "uri": "spotify:user:31l5pbuskjvmp5jv6ytgzxt7jw4u"
+            },
+            "is_local": false,
+            "primary_color": null,
+            "track": {
+                "album": {
+                    "album_type": "single",
+                    "artists": [
+                        {
+                            "external_urls": {
+                                "spotify": "https://open.spotify.com/artist/4WnO2VmlwdTX77ANsThWLQ"
+                            },
+                            "href": "https://api.spotify.com/v1/artists/4WnO2VmlwdTX77ANsThWLQ",
+                            "id": "4WnO2VmlwdTX77ANsThWLQ",
+                            "name": "CODE KUNST",
+                            "type": "artist",
+                            "uri": "spotify:artist:4WnO2VmlwdTX77ANsThWLQ"
+                        },
+                        {
+                            "external_urls": {
+                                "spotify": "https://open.spotify.com/artist/5KuvNz7npsGeDJdk8QHMVH"
+                            },
+                            "href": "https://api.spotify.com/v1/artists/5KuvNz7npsGeDJdk8QHMVH",
+                            "id": "5KuvNz7npsGeDJdk8QHMVH",
+                            "name": "meenoi",
+                            "type": "artist",
+                            "uri": "spotify:artist:5KuvNz7npsGeDJdk8QHMVH"
+                        }
+                    ],
+                    "external_urls": {
+                        "spotify": "https://open.spotify.com/album/4ieiyt4oVsEZGBY430vwaz"
+                    },
+                    "href": "https://api.spotify.com/v1/albums/4ieiyt4oVsEZGBY430vwaz",
+                    "id": "4ieiyt4oVsEZGBY430vwaz",
+                    "images": [
+                        {
+                            "height": 640,
+                            "url": "https://i.scdn.co/image/ab67616d0000b273e253ea7b4037c93631840aca",
+                            "width": 640
+                        },
+                        {
+                            "height": 300,
+                            "url": "https://i.scdn.co/image/ab67616d00001e02e253ea7b4037c93631840aca",
+                            "width": 300
+                        },
+                        {
+                            "height": 64,
+                            "url": "https://i.scdn.co/image/ab67616d00004851e253ea7b4037c93631840aca",
+                            "width": 64
+                        }
+                    ],
+                    "is_playable": true,
+                    "name": "Take Me",
+                    "release_date": "2022-06-20",
+                    "release_date_precision": "day",
+                    "total_tracks": 1,
+                    "type": "album",
+                    "uri": "spotify:album:4ieiyt4oVsEZGBY430vwaz"
+                },
+                "artists": [
+                    {
+                        "external_urls": {
+                            "spotify": "https://open.spotify.com/artist/4WnO2VmlwdTX77ANsThWLQ"
+                        },
+                        "href": "https://api.spotify.com/v1/artists/4WnO2VmlwdTX77ANsThWLQ",
+                        "id": "4WnO2VmlwdTX77ANsThWLQ",
+                        "name": "CODE KUNST",
+                        "type": "artist",
+                        "uri": "spotify:artist:4WnO2VmlwdTX77ANsThWLQ"
+                    },
+                    {
+                        "external_urls": {
+                            "spotify": "https://open.spotify.com/artist/5KuvNz7npsGeDJdk8QHMVH"
+                        },
+                        "href": "https://api.spotify.com/v1/artists/5KuvNz7npsGeDJdk8QHMVH",
+                        "id": "5KuvNz7npsGeDJdk8QHMVH",
+                        "name": "meenoi",
+                        "type": "artist",
+                        "uri": "spotify:artist:5KuvNz7npsGeDJdk8QHMVH"
+                    }
+                ],
+                "disc_number": 1,
+                "duration_ms": 225320,
+                "episode": false,
+                "explicit": false,
+                "external_ids": {
+                    "isrc": "KRC712200021"
+                },
+                "external_urls": {
+                    "spotify": "https://open.spotify.com/track/00qHTh5I15qb1IToZI6PoZ"
+                },
+                "href": "https://api.spotify.com/v1/tracks/00qHTh5I15qb1IToZI6PoZ",
+                "id": "00qHTh5I15qb1IToZI6PoZ",
+                "is_local": false,
+                "is_playable": true,
+                "name": "Take Me (with 11Kitties)",
+                "popularity": 38,
+                "preview_url": "https://p.scdn.co/mp3-preview/4154b1a3727ee1edace607e5492d6c17f89134fe?cid=1180fb31cb794ef887bb18daa3eccd90",
+                "track": true,
+                "track_number": 1,
+                "type": "track",
+                "uri": "spotify:track:00qHTh5I15qb1IToZI6PoZ"
+            },
+            "video_thumbnail": {
+                "url": null
+            }
         }
     ],
     "limit": 100,
     "next": null,
     "offset": 0,
     "previous": null,
-    "total": 47
+    "total": 49
 }

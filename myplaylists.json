@@ -3,6 +3,42 @@
     "items": [
         {
             "collaborative": false,
+            "description": "test",
+            "external_urls": {
+                "spotify": "https://open.spotify.com/playlist/5Eep9aW50tB4gbdEDpw2N3"
+            },
+            "href": "https://api.spotify.com/v1/playlists/5Eep9aW50tB4gbdEDpw2N3",
+            "id": "5Eep9aW50tB4gbdEDpw2N3",
+            "images": [
+                {
+                    "height": 640,
+                    "url": "https://i.scdn.co/image/ab67616d0000b2734ed058b71650a6ca2c04adff",
+                    "width": 640
+                }
+            ],
+            "name": "test",
+            "owner": {
+                "display_name": "\uc815\uc11d",
+                "external_urls": {
+                    "spotify": "https://open.spotify.com/user/31l5pbuskjvmp5jv6ytgzxt7jw4u"
+                },
+                "href": "https://api.spotify.com/v1/users/31l5pbuskjvmp5jv6ytgzxt7jw4u",
+                "id": "31l5pbuskjvmp5jv6ytgzxt7jw4u",
+                "type": "user",
+                "uri": "spotify:user:31l5pbuskjvmp5jv6ytgzxt7jw4u"
+            },
+            "primary_color": null,
+            "public": true,
+            "snapshot_id": "MzAsYmVmZjFmZjM3MzQwNWIwMjdjMGRhNjVjNzVlMjcyZjViZTRhM2U4Mw==",
+            "tracks": {
+                "href": "https://api.spotify.com/v1/playlists/5Eep9aW50tB4gbdEDpw2N3/tracks",
+                "total": 2
+            },
+            "type": "playlist",
+            "uri": "spotify:playlist:5Eep9aW50tB4gbdEDpw2N3"
+        },
+        {
+            "collaborative": false,
             "description": "\ubc31\uc608\ub9b0 track \ubaa8\uc74c",
             "external_urls": {
                 "spotify": "https://open.spotify.com/playlist/5Mbxar48RkliDLOfmWzK28"
@@ -75,10 +111,10 @@
             },
             "primary_color": null,
             "public": true,
-            "snapshot_id": "NDEsMTU0MDNmZmFhMzYzOTZkMWM3ZTIyZTUzYzQxNTIzMTUzN2YyMDY3MQ==",
+            "snapshot_id": "NDMsZDRmM2RlYWFhNDg5MzI3NzYyMDg0ZjFjOTc2OTNkZjFjZjY2MjhiMA==",
             "tracks": {
                 "href": "https://api.spotify.com/v1/playlists/7z6YsQtEVIAhUv33axBb7Z/tracks",
-                "total": 47
+                "total": 49
             },
             "type": "playlist",
             "uri": "spotify:playlist:7z6YsQtEVIAhUv33axBb7Z"
@@ -88,5 +124,5 @@
     "next": null,
     "offset": 0,
     "previous": null,
-    "total": 2
+    "total": 3
 }

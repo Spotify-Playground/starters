@@ -31,5 +31,3 @@ for i in IDS :
         json.dump(response_json,json_file,indent=4)
     
     
-    
-    
