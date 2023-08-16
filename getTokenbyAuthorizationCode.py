@@ -4,6 +4,8 @@ import string
 import requests
 import base64
 import config.info as info
+import module
+
 
 app = Flask(__name__)
 
@@ -12,40 +14,16 @@ client_secret = info.secret
 redirect_uri = info.RED_URI
 state_key = 'spotify_auth_state'
 
-
-def generate_random_string(length):
-    letters = string.ascii_letters + string.digits
-    return ''.join(random.choice(letters) for _ in range(length))
-
-def save_RefreshToken_to_file(token):
-    with open("config/RefreshToken.txt", "w") as file:
-        file.write(token)
-
-def save_AccessToken_to_file(token):
-    with open("config/AuthToken.txt", "w") as file:
-        file.write(token)
-        
-#토큰 불러오는 함수
-def read_AuthToken_from_file():
-    try:
-        with open("config/AuthToken.txt", "r") as file:
-            token = file.read().strip()
-            return token
-    except FileNotFoundError:
-        return None
-AuthToken = read_AuthToken_from_file()
-
-
 @app.route('/')
 def redirect_login():
     return redirect(url_for('login'), code=302)
 
 @app.route('/login')
 def login():
-    state = generate_random_string(16)
+    state = module.generate_random_string(16)
     response = redirect('https://accounts.spotify.com/authorize?' + 
                         f'response_type=code&client_id={client_id}&' +
-                        f'scope=playlist-read-private playlist-modify-private playlist-modify-public playlist-read-private playlist-read-collaborative user-read-recently-played&' +
+                        f'scope=playlist-read-private playlist-modify-private playlist-modify-public playlist-read-private playlist-read-collaborative user-read-recently-played user-follow-read&' +
                         f'redirect_uri={redirect_uri}&state={state}')
     response.set_cookie(state_key, state)    
     return response
@@ -71,8 +49,8 @@ def callback():
         data = response.json()
         access_token = data['access_token']
         refresh_token = data.get('refresh_token', None)
-        save_AccessToken_to_file(access_token)
-        save_RefreshToken_to_file(refresh_token)
+        module.save_AccessToken_to_file(access_token)
+        module.save_RefreshToken_to_file(refresh_token)
         
         user_response = requests.get('https://api.spotify.com/v1/me', headers={
             'Authorization': 'Bearer ' + access_token

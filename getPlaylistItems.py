@@ -1,23 +1,14 @@
 import requests
-import getPlaylistId
 import json
 import os
+import module
 
-IDS = getPlaylistId.ids
-
+IDS = module.read_playlist_id()
+AuthToken = module.read_AuthToken_from_file()
+# curl 예시
 # curl --request GET \
 #   --url https://api.spotify.com/v1/playlists/3cEYpjA9oz9GiPac4AsH4n/tracks \
 #   --header 'Authorization: Bearer 1POdFZRZbvb...qqillRxMr2z'
-# authoToken 불러오는 함수
-def read_Authtoken():
-    try:
-        with open("config/AuthToken.txt", "r") as file:
-            token = file.read().strip()
-            return token
-    except FileNotFoundError:
-        return None
-
-AuthToken = read_Authtoken()
 
 for i in IDS :
     url = f'https://api.spotify.com/v1/playlists/{i}/tracks'

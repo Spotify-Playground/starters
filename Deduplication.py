@@ -1,27 +1,57 @@
 import requests
 import os
 import json
-import getPlaylistId
+import module
 
-#playlist_id의 리스트
-# IDS = getPlaylistId.ids
+##playlist별 중복된 track 제거하기
 
-# print(IDS[0])
+IDS = module.read_playlist_id()
+Deduplicated_id = module.deduplicate_tracks(IDS)
+AuthToken = module.read_AuthToken_from_file()
 
-dupeled_ids = set()
+# Delete tracks
+for playlist in IDS :
+    tracks = Deduplicated_id[playlist]
+    track_list = list()
+    for track in tracks :
+        track_uri = {
+            "uri" : f"spotify:track:{track}"
+        }
+        track_list.append(track_uri)
+    url = f"https://api.spotify.com/v1/playlists/{playlist}/tracks"
+    header = {
+        "Authorization": "Bearer " + AuthToken,
+        "Content-Type": "application/json"
+    }
+    del_data = {
+        "tracks" : track_list
+    }
+    del_response = requests.delete(url, headers=header, json=del_data)
+    del_response_json = del_response.json()
+    
+    uris_list = list()
+    for track in tracks :
+        track_uri = f"spotify:track:{track}"
+        uris_list.append(track_uri)
+    add_data = {
+        "uris": uris_list
+    }
+    
+# Add tracks
+    add_response = requests.post(url,headers=header,json=add_data)
+    add_response_json = add_response.json()
 
-with open(f"userJS/5Eep9aW50tB4gbdEDpw2N3/tracks.json", "r") as json_file:
-    data = json.load(json_file)
+for i in IDS :
+    url = f'https://api.spotify.com/v1/playlists/{i}/tracks'
+    header = {"Authorization": "Bearer " +AuthToken }
+    response = requests.get(url, headers=header)
+    response_json = response.json()
+    
+    directory_path = f"userJS/{i}/"
+    os.makedirs(directory_path, exist_ok=True)
+    with open(f"userJS/{i}/tracks.json","w")as json_file:
+        json.dump(response_json,json_file,indent=4)
+    
 
-# # "items" 배열 안의 요소들의 "id" 값을 추출하여 리스트에 저장
-# dupeled_ids = [item["id"] for item in data["items"]]
-
-# print(dupeled_ids)
-for item in data["items"]:
-    if "track" in item and "id" in item["track"]:
-        dupeled_ids.add(item["track"]["id"])
-
-dupeled_ids = list(dupeled_ids)
-print(dupeled_ids)
 
 
