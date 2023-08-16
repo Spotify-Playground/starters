@@ -44,7 +44,13 @@ total_playlist_id = response_json["id"]
 
 
 url = f"https://api.spotify.com/v1/playlists/{total_playlist_id}/tracks"
-data = {"uris":"spotify:track:4iV5W9uYEdYUVa79Axb7Rh, spotify:track:1301WleyT98MSxVHPZCA6M, spotify:episode:512ojhOuo1ktJprKbVcKyQ"}
+data = {
+    "uris": [ 
+        "spotify:track:4iV5W9uYEdYUVa79Axb7Rh", 
+        "spotify:track:1301WleyT98MSxVHPZCA6M", 
+        "spotify:episode:512ojhOuo1ktJprKbVcKyQ"
+    ]
+}
 # curl --request POST \
 #   --url https://api.spotify.com/v1/playlists/054pYYA6qQ2qttFz6MrmIl/tracks \
 #   --header 'Authorization: Bearer BQB9JSvp0i-VohoeadsakgWpF5awz8199nSYEcp6XNYJdnR47FIWDuI3mkWFTN3mcK8FTr4RHOoChBv8rE_Z83M64QBHOgzozsB3IXjGZxYaU_dP-KtFkKZ0EqB8g9ePuMJaMydYx29SLrtQQg1zMSELLQv3wRF7XWIVTSbOtFZpaMfXhBsqIaf879U0c6nwkE-uo_VDTcW9mJU6couscl_yHz_67duspTtXbGuzVc9aEI9Vt2mMUUXfwdsc6S14EKmCAF2loMsvmPsmOcKbK_A6fDxLhtk8Mp7X' \
