@@ -8,6 +8,7 @@ numpy = "*"
 pandas = "*"
 requests = "*"
 flask = "*"
+psycopg2 = "*"
 
 [dev-packages]
 

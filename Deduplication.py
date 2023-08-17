@@ -51,7 +51,8 @@ for i in IDS :
     os.makedirs(directory_path, exist_ok=True)
     with open(f"userJS/{i}/tracks.json","w")as json_file:
         json.dump(response_json,json_file,indent=4)
-    
+
+    module.insert_track_to_db(i)
 
 
 

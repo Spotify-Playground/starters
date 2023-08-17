@@ -6,6 +6,8 @@ import random
 import string
 import base64
 import config.info as info
+import psycopg2
+import config.database_info as db
 
 # login에 필요한 랜덤 16자리 state값 만들기
 def generate_random_string(length):
@@ -83,3 +85,51 @@ def deduplicate_tracks(ids):
         deduplicated_tracks[playlist_id] = list(deduplicated_ids)
     return deduplicated_tracks
 
+# db에 json 저장
+def insert_track_to_db(id):
+    # 커넥터
+    conn = psycopg2.connect(
+        database = db.database,
+        user = db.user,
+        password = db.password,
+        host = db.host,
+        port = db.port
+    )
+    # 커서
+    cur = conn.cursor()
+    # JSON 데이터를 문자열로 변환하여 저장
+    with open(f"userJS/{id}/tracks.json", "r") as json_file:
+        json_data = json.load(json_file)
+    type = "track"
+    json_string = json.dumps(json_data)
+    query = "INSERT INTO test1 (content,type) VALUES (%s, %s)"
+    cur.execute(query, (json_string,type))
+
+    # 커밋 및 연결 닫기
+    conn.commit()
+    cur.close()
+    conn.close()
+    
+def insert_playlist_to_db():
+    # 커넥터
+    conn = psycopg2.connect(
+        database = db.database,
+        user = db.user,
+        password = db.password,
+        host = db.host,
+        port = db.port
+    )
+    # 커서
+    cur = conn.cursor()
+    # JSON 데이터를 문자열로 변환하여 저장
+    with open(f"userJS/myplaylists.json", "r") as json_file:
+        json_data = json.load(json_file)
+    type = "playlist"
+    json_string = json.dumps(json_data)
+    query = "INSERT INTO test1 (content,type) VALUES (%s, %s)"
+    cur.execute(query, (json_string,type))
+
+    # 커밋 및 연결 닫기
+    conn.commit()
+    cur.close()
+    conn.close()

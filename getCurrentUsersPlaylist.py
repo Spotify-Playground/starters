@@ -18,5 +18,6 @@ response = requests.get(url, headers=header)
 if response.status_code == 200:  # HTTP OK
     response_json = response.json()
     module.save_MyPlaylist_to_json(response_json)
+    module.insert_playlist_to_db()
 else:
     print(f"Error: {response.status_code}")
