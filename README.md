@@ -1,6 +1,6 @@
 ![image](https://github.com/Spotify-Playground/starters/assets/131243101/47fec427-2095-4217-aa0c-14876d03f2c6)
 
-## [OwlsClub] Spotify API 서비스 개발
+## [OwlsClub] Spotify API 서비스 개발기
 Spotify 어플리케이션(모바일/데스크톱/웹)과 상호작용하는 API 서비스 개발 <br>
 
 > **Spotify 사용자 데이터 기반 개인화 서비스** <br>
