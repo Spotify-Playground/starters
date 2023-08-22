@@ -1,11 +1,8 @@
 from flask import Flask, redirect, request, jsonify, url_for
-import random
-import string
 import requests
 import base64
 import config.info as info
 import module
-
 
 app = Flask(__name__)
 

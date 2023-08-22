@@ -9,6 +9,7 @@ pandas = "*"
 requests = "*"
 flask = "*"
 psycopg2 = "*"
+streamlit = "*"
 
 [dev-packages]
 
